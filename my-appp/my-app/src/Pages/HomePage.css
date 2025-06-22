@@ -1,0 +1,50 @@
+/* src/pages/HomePage.css */
+
+.container {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    /* add spacing below cards */
+}
+
+.card {
+    background-color: #af57e6;
+    border-left: 5px solid #ebeff1;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+.notice:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out; 
+}
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.notice {
+    background-color: #af57e6;
+    border-left: 5px solid #ebeff1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+}

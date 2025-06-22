@@ -1,0 +1,136 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    /*border-right: 1px solid #e0e0e0;*/
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.expanded {
+    width: 200px;
+}
+
+.toggle-button {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+    font-size: 24px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.label {
+    white-space: nowrap;
+}
+
+.sidebar.collapsed .label {
+    display: none;
+}
+.sidebar hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(12, 12, 17);
+    margin: 8px 0;
+}
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+.logout-link:hover {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+/* Sidebar layout remains the same */
+
+/* Logout Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal {
+    background: #a87eec;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    margin-bottom: 10px;
+}
+
+.modal p {
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn.cancel {
+    background-color: #ccc;
+}
+
+.btn.logout {
+    background-color: #e74c3c;
+    color: white;
+}

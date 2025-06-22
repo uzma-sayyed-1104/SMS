@@ -1,0 +1,201 @@
+/* FormStyles.css */
+.form-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 12px;
+    margin: 8px;
+    width: calc(100% - 30px);
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4a148c;
+}
+/* Container for the class list */
+.class-list ,.teacher-list{
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Unordered list styling */
+.class-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual list items */
+.class-list li {
+    background-color: #f5f5f5;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Delete button styling */
+.class-list .delete-button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.class-list .delete-button:hover {
+    background-color: #c62828;
+}
+/* Styling for the subject list container */
+.subject-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Unordered list styling */
+.subject-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual list items */
+.subject-list li {
+    background-color: #f5f5f5;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Delete button styling */
+.subject-list .delete-button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.subject-list .delete-button:hover {
+    background-color: #c62828;
+}
+/* Teacher List Styling */
+.teacher-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.teacher-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.teacher-list li {
+    background-color: #f5f5f5;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Delete button inside teacher list */
+.teacher-list .delete-button {
+    background-color: #c62828;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.teacher-list .delete-button:hover {
+    background-color: #e9e4e4;
+}
+.notice-card ,.list-item {
+    background-color: #f3e5f5;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.notice-card h4 ,
+.list-item h4 {
+    margin-bottom: 6px;
+    color: #4a148c;
+}
+
+.notice-card p,
+.list-item p {
+    margin-bottom: 8px;
+}
+
+.notice-card small {
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.notice-card .delete-btn,
+.list-item .delete-btn {
+    background-color: #e53935;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.notice-card .delete-btn:hover ,
+.list-item .delete-btn:hover{
+    background-color: #b71c1c;
+}

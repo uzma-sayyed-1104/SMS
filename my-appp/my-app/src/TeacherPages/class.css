@@ -1,0 +1,42 @@
+.class-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.class-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.class-form input {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.class-form button {
+    padding: 10px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.class-form button:hover {
+    background-color: #163278;
+}
+
+.class-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.class-list li {
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 5px solid #1e3a8a;
+}

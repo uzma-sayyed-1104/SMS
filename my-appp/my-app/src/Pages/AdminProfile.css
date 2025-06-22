@@ -1,0 +1,11 @@
+.profile-container {
+    padding: 20px;
+}
+
+.profile-card {
+    background-color: #f0f0f0;
+    padding: 16px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

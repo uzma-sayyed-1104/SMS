@@ -1,0 +1,88 @@
+/* src/components/LoginForm.css */
+.login-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.login-form {
+    flex: 1;
+    padding: 60px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form h2 {
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.login-form label {
+    margin-top: 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-btn,
+.guest-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #6C4EE3;
+}
+
+.guest-btn {
+    background-color: transparent;
+    border: 2px solid #6C4EE3;
+    color: #6C4EE3;
+}
+
+.signup {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-image {
+    flex: 1;
+    background-color: #f8f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background: #6C4EE3;
+    border-radius: 50%;
+    box-shadow: 0 0 80px #6C4EE3a2;
+}

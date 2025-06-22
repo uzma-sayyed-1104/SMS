@@ -1,0 +1,10 @@
+.top-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background-color: #1976d2;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
