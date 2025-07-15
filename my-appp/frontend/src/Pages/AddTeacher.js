@@ -14,7 +14,7 @@ const AddTeacher = () => {
 
   const fetchTeachers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/teachers');
+      const res = await axios.get('https://sms-backend-m58q.onrender.com/api/teachers');
       setTeachers(res.data);
       setError(null);
     } catch (err) {
@@ -34,7 +34,7 @@ const AddTeacher = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/api/teachers/add', formData);
+      const res = await axios.post('https://sms-backend-m58q.onrender.com/api/teachers/add', formData);
       if (res.status === 201) {
         alert(`✅ Teacher added successfully: ${formData.name}`);
         setFormData({ name: '', subject: '', email: '' });
@@ -51,7 +51,7 @@ const AddTeacher = () => {
     if (!confirmed) return; // User clicked "Cancel"
   
     try {
-      const res = await axios.delete(`http://localhost:5000/api/teachers/${id}`);
+      const res = await axios.delete(`https://sms-backend-m58q.onrender.com/api/teachers/${id}`);
       if (res.status === 200) {
         alert('✅ Teacher deleted successfully');
         fetchTeachers();
