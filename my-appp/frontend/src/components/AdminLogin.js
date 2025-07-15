@@ -28,7 +28,7 @@ const Login = () => {
   
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/login", // Adjust if your backend path is different
+        "https://sms-backend-m58q.onrender.com/api/users/login", // Adjust if your backend path is different
         trimmedData
       );
   
