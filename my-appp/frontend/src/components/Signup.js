@@ -28,7 +28,7 @@ const Signup = () => {
     }
   
     try {
-      const response = await axios.post("http://localhost:5000/api/users/signup", {
+      const response = await axios.post("https://sms-backend-m58q.onrender.com/api/users/signup", {
         name: formData.name,
         email: formData.email,
         password: formData.password,
