@@ -13,7 +13,7 @@ const AddStudent = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/students/add', formData);
+      const response = await axios.post('https://sms-backend-m58q.onrender.com/api/students/add', formData);
 
       if (response.status === 201) {
         alert(`Student "${formData.name}" added successfully!`);
