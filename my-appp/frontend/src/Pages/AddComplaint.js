@@ -16,7 +16,7 @@ const AddComplaint = () => {
 
   const fetchComplaints = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/complaints');
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/complaints');
       const data = await res.json();
       setComplaints(data);
     } catch (err) {
@@ -27,7 +27,7 @@ const AddComplaint = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/complaints/add', {
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/complaints/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(complaint)
@@ -50,7 +50,7 @@ const AddComplaint = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this complaint?')) {
       try {
-        const res = await fetch(`http://localhost:5000/api/complaints/${id}`, {
+        const res = await fetch(`https://sms-backend-m58q.onrender.com/api/complaints/${id}`, {
           method: 'DELETE'
         });
         if (res.ok) {
