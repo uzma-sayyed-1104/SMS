@@ -34,18 +34,20 @@ router.post('/login', async (req, res) => {
 
 // Admin Profile Route (GET)
 router.get('/profile', auth, async (req, res) => {
-  console.log(req.user.id);
+  console.log("🔐 Token payload:", req.user);  // log decoded JWT payload
+
   try {
     const admin = await adminprofile.findById(req.user.id).select('-password');
-    console.log("Fetched admin:", admin); 
-    console.log("admin is ",token);
+
     if (!admin) {
+      console.log("❌ Admin not found for ID:", req.user.id);
       return res.status(404).json({ message: "Admin not found" });
     }
 
+    console.log("✅ Admin found:", admin);
     res.json(admin);
   } catch (error) {
-    console.error("Error fetching profile:", error.message);
+    console.error("🔥 Server error:", error.message);
     res.status(500).json({ message: "Server error" });
   }
 });

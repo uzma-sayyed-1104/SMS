@@ -14,7 +14,7 @@ const HomePage = () => {
         <p>
           Welcome to the Student Management System. Manage student records efficiently and effectively.
         </p>
-        <button className="login-btn"onClick={() => navigate("/login/admin")}>
+        <button className="login-btn"onClick={() => navigate("/login")}>
           Login
         </button>
       </div>

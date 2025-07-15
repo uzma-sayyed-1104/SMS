@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config(); // ✅ Load .env variables at the very top
+
 const userRoutes = require('./routes/users');
 const studentRoutes = require('./routes/students');
 const teacherRoutes = require('./routes/teachers');
@@ -10,10 +12,6 @@ const noticeRoutes = require('./routes/notices');
 const subjectRoutes = require('./routes/subjects');
 const adminRoutes = require('./routes/admin');
 const complaintRoutes = require('./routes/complaints');
-
-
-
-
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -33,17 +31,15 @@ app.use('/api/subjects', subjectRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/complaints', complaintRoutes);
 
-
-
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/SMS')
-.then(() => {
-  console.log('Connected to MongoDB');
-  // Start the server after successful DB connection
-  app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('✅ Connected to MongoDB Atlas');
+    app.listen(PORT, () => {
+      console.log(`🚀 Server is running on port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error('❌ MongoDB connection error:', error);
   });
-})
-.catch((error) => {
-  console.error('MongoDB connection error:', error);
-});
+
