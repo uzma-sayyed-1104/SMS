@@ -13,7 +13,7 @@ const ClassesPage = () => {
 
   const fetchClassCount = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/classes/count');
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/classes/count');
       const data = await res.json();
       setClassCount(data.count);
     } catch (error) {
@@ -23,7 +23,7 @@ const ClassesPage = () => {
 
   const fetchClassList = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/classes');
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/classes');
       const data = await res.json();
       setClassList(data);
     } catch (error) {
@@ -39,7 +39,7 @@ const ClassesPage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/classes/add', {
+      const response = await fetch('https://sms-backend-m58q.onrender.com/api/classes/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const ClassesPage = () => {
 
   const handleDeleteClass = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/classes/${id}`, {
+      const response = await fetch(`https://sms-backend-m58q.onrender.com/api/classes/${id}`, {
         method: 'DELETE',
       });
 
