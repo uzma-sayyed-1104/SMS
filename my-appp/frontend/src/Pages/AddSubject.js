@@ -15,7 +15,7 @@ const AddSubject = () => {
 
   const fetchSubjects = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/subjects');
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/subjects');
       const data = await res.json();
       setSubjects(data);
     } catch (err) {
@@ -31,7 +31,7 @@ const AddSubject = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:5000/api/subjects/add', {
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/subjects/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(subject)
@@ -53,7 +53,7 @@ const AddSubject = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/subjects/${id}`, {
+      const res = await fetch(`https://sms-backend-m58q.onrender.com/api/subjects/${id}`, {
         method: 'DELETE'
       });
 
