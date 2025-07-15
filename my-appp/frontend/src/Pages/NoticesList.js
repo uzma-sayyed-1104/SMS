@@ -7,7 +7,7 @@ const NoticesList = () => {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/notices');
+        const res = await fetch('https://sms-backend-m58q.onrender.com/api/notices');
           const data = await res.json();
           console.log("Fetched Notices:", data);
           setNotices(data);
