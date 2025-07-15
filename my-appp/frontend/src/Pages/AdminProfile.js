@@ -16,7 +16,7 @@ const AdminProfile = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/admin/profile', {
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/admin/profile', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
