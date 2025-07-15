@@ -13,7 +13,7 @@ const HomePage = () => {
 
   // Fetch dashboard counts
   const fetchCounts = () => {
-    fetch("http://localhost:5000/api/dashboard/counts")
+    fetch("https://sms-backend-m58q.onrender.com/api/dashboard/counts")
       .then(res => res.json())
       .then(data => setCounts(data))
       .catch(err => console.error("Error fetching dashboard data:", err));
@@ -21,7 +21,7 @@ const HomePage = () => {
 
   // Fetch notices
   const fetchNotices = () => {
-    fetch("http://localhost:5000/api/notices")
+    fetch("https://sms-backend-m58q.onrender.com/api/notices")
       .then(res => res.json())
       .then(data => setNotices(data))
       .catch(err => console.error("Error fetching notices:", err));
