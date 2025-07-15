@@ -18,7 +18,7 @@ const AddNotice = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:5000/api/notices/add', {
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/notices/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(notice)
@@ -40,7 +40,7 @@ const AddNotice = () => {
 
   const fetchNotices = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/notices');
+      const res = await fetch('https://sms-backend-m58q.onrender.com/api/notices');
       const data = await res.json();
       setNotices(data.reverse());
     } catch (err) {
@@ -52,7 +52,7 @@ const AddNotice = () => {
     if (!window.confirm('Are you sure you want to delete this notice?')) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/notices/${id}`, {
+      const res = await fetch(`https://sms-backend-m58q.onrender.com/api/notices/${id}`, {
         method: 'DELETE'
       });
       if (res.ok) {
